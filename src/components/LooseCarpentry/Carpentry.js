@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import MaterialName from "./MaterialName"
+import Labour from './Labour';
 
 class Carpentry extends Component {
     constructor(props) {
@@ -50,34 +51,9 @@ class Carpentry extends Component {
     }
     checkboxValue = (name, val) => {
 
-        // if (val === true || val === 'on') {
-        //     console.log("val", val);
-        //     this.setState({ [name]: false })
-        // }
-        // if (val === false || val === "false") {
-        //     this.setState({ [name]: true })
-        // }
-        //  console.log(this.state);
-
-
     }
-    addNewRow = (e) => {
-        this.setState((prevState) => ({
-            zoneList: [...prevState.zoneList, { index: Math.random(), zoneOp1: "", area: "" }],
-        }));
-    }
-
-    deteteRow = (index) => {
-        this.setState({
-            zoneList: this.state.zoneList.filter((s, sindex) => index !== sindex),
-        });
-    }
-    clickOnDelete(record) {
-        this.setState({
-            zoneList: this.state.zoneList.filter(r => r !== record)
-        });
-    }
-
+   
+   
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
@@ -120,7 +96,7 @@ class Carpentry extends Component {
                                 {
           this.state.labourList.map((val, idx) => {
         return (
-            <div className="row" key={val.index}  ><div  className="col-sm-12" ><MaterialName  idx={idx} passedData={val} /></div></div>
+            <div className="row" key={val.index}  ><div  className="col-sm-12" ><Labour  idx={idx} passedData={val} /></div></div>
         )
     })
 
