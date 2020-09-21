@@ -13,11 +13,9 @@ class Carpentry extends Component {
             { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
             { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" }, 
             ],
-            labourList: [{ index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" }, 
+            labourList: [{ index: Math.random(), materialDisplayName: "Display Material Name", area: false, startDate: "", endDate: "", startTime: "", endTime: "" },
+            { index: Math.random(), materialDisplayName: "Display Material Name", area: false, startDate: "", endDate: "", startTime: "", endTime: "" },
+            { index: Math.random(), materialDisplayName: "Display Material Name", area: false, startDate: "", endDate: "", startTime: "", endTime: "" },
             ],
             wardrobe: true,
 
@@ -29,7 +27,7 @@ class Carpentry extends Component {
             let matrialList = [...this.state.matrialList]
             matrialList[e.target.dataset.id][e.target.name] = e.target.value;
         } 
-        else if (["amount","brandSpeci","date","time"].includes(e.target.name)) {
+        else if (["area","startDate","endDate","startTime","endTime"].includes(e.target.name)) {
             let labourList = [...this.state.matrialList]
             labourList[e.target.dataset.id][e.target.name] = e.target.value;
         }
