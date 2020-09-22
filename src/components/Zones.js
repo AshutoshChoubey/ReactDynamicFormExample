@@ -14,7 +14,7 @@ const Zones = (props) => {
           <div className="col-sm-2">
             {
             idx===(props.zone.length-1)?<button onClick={()=>props.add()} type="button" className="btn btn-primary text-center">+</button>
-            : <button className="btn btn-danger" onClick={(() => props.delete(val))} >-</button>
+            : <button type="button" className="btn btn-danger" onClick={(() => props.delete(val))} >-</button>
             }
           </div>
         </div >

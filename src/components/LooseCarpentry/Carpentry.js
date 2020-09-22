@@ -8,15 +8,14 @@ class Carpentry extends Component {
 
         this.state = {
 
-            matrialList: [{ index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", materialName: false, amount: "", brandSpeci: "", date: "", time: "" }, 
+            matrialList: [{ index: Math.random(), materialDisplayName: "Display Material Name1", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
+            { index: Math.random(), materialDisplayName: "Display Material Name2", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
+            { index: Math.random(), materialDisplayName: "Display Material Name3", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
+            { index: Math.random(), materialDisplayName: "Display Material Name4", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
+            { index: Math.random(), materialDisplayName: "Display Material Name5", materialName: false, amount: "", brandSpeci: "", date: "", time: "" }, 
             ],
-            labourList: [{ index: Math.random(), materialDisplayName: "Display Material Name", area: false, startDate: "", endDate: "", startTime: "", endTime: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", area: false, startDate: "", endDate: "", startTime: "", endTime: "" },
-            { index: Math.random(), materialDisplayName: "Display Material Name", area: false, startDate: "", endDate: "", startTime: "", endTime: "" },
+            labourList: [{ index: Math.random(), materialDisplayName: "Display  Name1", area: false, startDate: "", endDate: "", startTime: "", endTime: "",descripition:"",skilled:"",semiskilled:"",nonskilled:"",totalWork:"",uploaddrawing:"" },
+            { index: Math.random(), materialDisplayName: "Display  Name2", area: false, startDate: "", endDate: "", startTime: "", endTime: "",descripition:"",skilled:"",semiskilled:"",nonskilled:"",totalWork:"",uploaddrawing:"" },{ index: Math.random(), materialDisplayName: "Display  Name3", area: false, startDate: "", endDate: "", startTime: "", endTime: "",descripition:"",skilled:"",semiskilled:"",nonskilled:"",totalWork:"",uploaddrawing:"" },
             ],
             wardrobe: true,
 
@@ -28,7 +27,7 @@ class Carpentry extends Component {
             let matrialList = [...this.state.matrialList]
             matrialList[e.target.dataset.id][e.target.name] = e.target.value;
         } 
-        else if (["area","startDate","endDate","startTime","endTime"].includes(e.target.name)) {
+        else if (["area","startDate","endDate","startTime","endTime","descripition","skilled:","semiskilled:","nonskilled","totalWork","uploaddrawing"].includes(e.target.name)) {
             let labourList = [...this.state.matrialList]
             labourList[e.target.dataset.id][e.target.name] = e.target.value;
         }
