@@ -5,9 +5,7 @@ import Labour from './Labour';
 class Carpentry extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
-
             matrialList: [{ index: Math.random(), materialDisplayName: "Display Material Name1", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
             { index: Math.random(), materialDisplayName: "Display Material Name2", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
             { index: Math.random(), materialDisplayName: "Display Material Name3", materialName: false, amount: "", brandSpeci: "", date: "", time: "" },
@@ -17,7 +15,6 @@ class Carpentry extends Component {
             labourList: [{ index: Math.random(), materialDisplayName: "Display  Name1", area: false, startDate: "", endDate: "", startTime: "", endTime: "", descripition: "", skilled: "", semiskilled: "", nonskilled: "", totalWork: "", uploaddrawing: "" },
             ],
             wardrobe: true,
-
         }
     }
     handleChange = (e) => {
@@ -73,10 +70,7 @@ class Carpentry extends Component {
                         <div className="card-header">
                             <ul className="nav nav-tabs card-header-tabs">
                                 <li className="nav-item">
-                                    <a className="nav-link active">Wardrobe</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link ">Bed</a>
+                                    <a className="nav-link active">Complex Form</a>
                                 </li>
                             </ul>
                         </div>

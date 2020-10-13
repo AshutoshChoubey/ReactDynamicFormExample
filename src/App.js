@@ -15,11 +15,6 @@ function App() {
         <Route path="/" exact component={BasicInfo} />
         <Route path="/basic" exact component={BasicInfo} />
         <Route path="/carpentry" exact component={Carpentry} />
-        <Route path="/electrical" exact component={BasicInfo} />
-        <Route path="/civil" exact component={BasicInfo} />
-        <Route path="/landscope" exact component={BasicInfo} />
-        <Route path="/fire-sefty" exact component={BasicInfo} />
-        <Route path="/modular-kitchen" exact component={BasicInfo} />
       </SideBar>
     </Router>
     </div>
