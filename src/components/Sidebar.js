@@ -19,7 +19,7 @@ class SideBar extends Component {
 
         <div className="sidenav">
           <NavLink isActive={this.checkActive()} to="/basic">Basic Information</NavLink>
-          <NavLink isActive={this.checkActive()} to="/carpentry">Loose Carpentry</NavLink>
+          <NavLink isActive={this.checkActive()} to="/carpentry">Little complex Form</NavLink>
         </div>
         <div className="main">
           <div className="navbar  navbar-expand-lg ">

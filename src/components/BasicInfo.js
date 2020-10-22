@@ -110,7 +110,7 @@ class BasicInfo extends Component {
                                                 <UploadDrawing />
                                             </div>
                                             <div className="card-footer" >
-                                                <button type="submit" onClick={this.showTask} className="btn btn-primary text-center"> {this.state.showTask ? "Edit" : "Submit"}</button>
+                                                <button type="button" onClick={this.showTask} className="btn btn-primary text-center"> {this.state.showTask ? "Edit" : "Submit"}</button>
                                             </div>
                                         </div>
                                     </div>
