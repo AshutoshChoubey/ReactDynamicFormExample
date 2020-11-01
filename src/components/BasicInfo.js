@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import BasicTask from "./BasicTask";
+import DisplayZone from "./DisplayZone";
 import Supervisor from "./Supervisor";
 import UploadDrawing from "./UploadDrawing";
 import Zones from "./Zones";
@@ -12,7 +13,7 @@ class BasicInfo extends Component {
             superDropdown: "",
             superCal1: "",
             superCal2: "",
-            zoneList: [{ index: Math.random(), zoneOp1: "", area: "" }],
+            zoneList: [{ index: Math.random(), zoneOp1: "", area: "" },{ index: Math.random(), zoneOp1: "", area: "" },{ index: Math.random(), zoneOp1: "", area: "" }],
             uploadDrawing1: "",
             uploadDrawing2: "",
             uploadDrawing3: "",
@@ -32,10 +33,13 @@ class BasicInfo extends Component {
             let zoneList = [...this.state.zoneList]
             zoneList[e.target.dataset.id][e.target.name] = e.target.value;
         } else if (e.target.type === "checkbox") {
-            //this.setState({ [e.target.name]: e.target.value })
+            // this.setState({ [e.target.name]: e.target.value })
+            // console.log(e.target.name)
+            // console.log(e.target.value)
         }
         else {
             this.setState({ [e.target.name]: e.target.value })
+           
         }
 
     }
@@ -64,6 +68,7 @@ class BasicInfo extends Component {
         });
     }
     clickOnDelete(record) {
+       // console.log(record);
         this.setState({
             zoneList: this.state.zoneList.filter(r => r !== record)
         });
@@ -71,8 +76,8 @@ class BasicInfo extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
-        this.props.history.push("/carpentry");
+        console.log(this.state.zoneList)
+       // this.props.history.push("/carpentry");
     }
     showTask = (e) => {
         this.setState({ "showTask": true })
@@ -116,7 +121,9 @@ class BasicInfo extends Component {
                                     </div>
                                 </div>
                                 {this.state.showTask ? <BasicTask checkboxValue={this.checkboxValue} taskData={this.state} /> : ""}
-
+                                {this.state.showTask ? <DisplayZone data1={this.state.zoneList } /> : ""}
+                               
+                                
                                 <div className="card-footer text-center"> <button type="submit" className="btn btn-primary text-center">Submit</button></div>
                             </form>
                         </div>
